@@ -30,9 +30,9 @@
         {
             this.tbc_control1 = new System.Windows.Forms.TabControl();
             this.tbp_1 = new System.Windows.Forms.TabPage();
-            this.tbp_2 = new System.Windows.Forms.TabPage();
-            this.clb_list = new System.Windows.Forms.CheckedListBox();
             this.btn_apply = new System.Windows.Forms.Button();
+            this.clb_list = new System.Windows.Forms.CheckedListBox();
+            this.tbp_2 = new System.Windows.Forms.TabPage();
             this.tbc_control1.SuspendLayout();
             this.tbp_1.SuspendLayout();
             this.SuspendLayout();
@@ -60,15 +60,15 @@
             this.tbp_1.Text = "선택";
             this.tbp_1.UseVisualStyleBackColor = true;
             // 
-            // tbp_2
+            // btn_apply
             // 
-            this.tbp_2.Location = new System.Drawing.Point(4, 22);
-            this.tbp_2.Name = "tbp_2";
-            this.tbp_2.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_2.Size = new System.Drawing.Size(476, 435);
-            this.tbp_2.TabIndex = 1;
-            this.tbp_2.Text = "시트";
-            this.tbp_2.UseVisualStyleBackColor = true;
+            this.btn_apply.Location = new System.Drawing.Point(6, 401);
+            this.btn_apply.Name = "btn_apply";
+            this.btn_apply.Size = new System.Drawing.Size(150, 28);
+            this.btn_apply.TabIndex = 1;
+            this.btn_apply.Text = "적용";
+            this.btn_apply.UseVisualStyleBackColor = true;
+            this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
             // 
             // clb_list
             // 
@@ -80,15 +80,15 @@
             this.clb_list.Sorted = true;
             this.clb_list.TabIndex = 0;
             // 
-            // btn_apply
+            // tbp_2
             // 
-            this.btn_apply.Location = new System.Drawing.Point(6, 401);
-            this.btn_apply.Name = "btn_apply";
-            this.btn_apply.Size = new System.Drawing.Size(150, 28);
-            this.btn_apply.TabIndex = 1;
-            this.btn_apply.Text = "적용";
-            this.btn_apply.UseVisualStyleBackColor = true;
-            this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
+            this.tbp_2.Location = new System.Drawing.Point(4, 22);
+            this.tbp_2.Name = "tbp_2";
+            this.tbp_2.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_2.Size = new System.Drawing.Size(476, 435);
+            this.tbp_2.TabIndex = 1;
+            this.tbp_2.Text = "시트";
+            this.tbp_2.UseVisualStyleBackColor = true;
             // 
             // Sheet
             // 
@@ -101,6 +101,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sheet";
             this.Load += new System.EventHandler(this.Sheet_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Sheet_KeyDown);
             this.tbc_control1.ResumeLayout(false);
             this.tbp_1.ResumeLayout(false);
             this.ResumeLayout(false);

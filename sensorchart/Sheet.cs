@@ -44,6 +44,7 @@ namespace sensorchart
                 clb_list.Items.Add(r["id"] + "\n");
             }
             MConn.Close();
+            this.KeyPreview = true;
         }
 
         private void btn_apply_Click(object sender, EventArgs e)
@@ -65,6 +66,14 @@ namespace sensorchart
             {
                 mainform.lbx_list.Items.Add(r);
             }     
+        }
+
+        private void Sheet_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -89,9 +89,22 @@ namespace sensorchart
             MConn.Close();
         }
 
-        private void btn_esc_Click(object sender, EventArgs e)
+        private void tbx_id_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
+            idchk = false;
+        }
+
+        private void Signup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
         }
     }
 }
