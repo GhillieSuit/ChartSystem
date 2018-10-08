@@ -36,6 +36,7 @@
             this.tbx_passok = new System.Windows.Forms.TextBox();
             this.btn_signup = new System.Windows.Forms.Button();
             this.btn_chk = new System.Windows.Forms.Button();
+            this.btn_esc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbx_id
@@ -108,11 +109,25 @@
             this.btn_chk.UseVisualStyleBackColor = true;
             this.btn_chk.Click += new System.EventHandler(this.btn_chk_Click);
             // 
+            // btn_esc
+            // 
+            this.btn_esc.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_esc.Location = new System.Drawing.Point(326, 13);
+            this.btn_esc.Name = "btn_esc";
+            this.btn_esc.Size = new System.Drawing.Size(46, 23);
+            this.btn_esc.TabIndex = 6;
+            this.btn_esc.Text = "Close";
+            this.btn_esc.UseVisualStyleBackColor = true;
+            this.btn_esc.Visible = false;
+            this.btn_esc.Click += new System.EventHandler(this.btn_esc_Click);
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_esc;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.btn_esc);
             this.Controls.Add(this.btn_chk);
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.tbx_id);
@@ -121,6 +136,8 @@
             this.Controls.Add(this.lbl_passok);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.lbl_passwd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
@@ -139,5 +156,6 @@
         private System.Windows.Forms.TextBox tbx_passok;
         private System.Windows.Forms.Button btn_signup;
         private System.Windows.Forms.Button btn_chk;
+        public System.Windows.Forms.Button btn_esc;
     }
 }

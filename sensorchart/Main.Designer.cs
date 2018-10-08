@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.dtp_from_date = new System.Windows.Forms.DateTimePicker();
             this.lbl_from = new System.Windows.Forms.Label();
             this.dtp_to_date = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,8 @@
             this.btn_from_p10m = new System.Windows.Forms.Button();
             this.ckb_auto = new System.Windows.Forms.CheckBox();
             this.btn_apply = new System.Windows.Forms.Button();
+            this.btn_export = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,20 +105,20 @@
             this.chart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
+            chartArea6.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart.Legends.Add(legend6);
             this.chart.Location = new System.Drawing.Point(15, 122);
             this.chart.Name = "chart";
             this.chart.Size = new System.Drawing.Size(1237, 547);
             this.chart.TabIndex = 10;
             this.chart.TabStop = false;
             this.chart.Text = "Chart";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "Chart";
-            this.chart.Titles.Add(title1);
+            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title1";
+            title6.Text = "Chart";
+            this.chart.Titles.Add(title6);
             // 
             // dtp_from_time
             // 
@@ -294,16 +297,17 @@
             // ckb_auto
             // 
             this.ckb_auto.AutoSize = true;
-            this.ckb_auto.Location = new System.Drawing.Point(576, 71);
+            this.ckb_auto.Location = new System.Drawing.Point(576, 39);
             this.ckb_auto.Name = "ckb_auto";
             this.ckb_auto.Size = new System.Drawing.Size(96, 16);
             this.ckb_auto.TabIndex = 12;
             this.ckb_auto.Text = "Auto Refresh";
             this.ckb_auto.UseVisualStyleBackColor = true;
+            this.ckb_auto.CheckedChanged += new System.EventHandler(this.ckb_auto_CheckedChanged);
             // 
             // btn_apply
             // 
-            this.btn_apply.Location = new System.Drawing.Point(576, 90);
+            this.btn_apply.Location = new System.Drawing.Point(576, 61);
             this.btn_apply.Name = "btn_apply";
             this.btn_apply.Size = new System.Drawing.Size(96, 23);
             this.btn_apply.TabIndex = 13;
@@ -311,11 +315,28 @@
             this.btn_apply.UseVisualStyleBackColor = true;
             this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
             // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(576, 90);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(96, 23);
+            this.btn_export.TabIndex = 13;
+            this.btn_export.Text = "Export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btn_export);
             this.Controls.Add(this.btn_apply);
             this.Controls.Add(this.ckb_auto);
             this.Controls.Add(this.btn_from_p10m);
@@ -377,6 +398,8 @@
         private System.Windows.Forms.Button btn_from_p10m;
         private System.Windows.Forms.CheckBox ckb_auto;
         private System.Windows.Forms.Button btn_apply;
+        private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -96,7 +96,6 @@
             this.tbx_passwd.PasswordChar = '●';
             this.tbx_passwd.Size = new System.Drawing.Size(250, 21);
             this.tbx_passwd.TabIndex = 2;
-            this.tbx_passwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_passwd_KeyPress);
             // 
             // tbx_id
             // 
@@ -104,7 +103,6 @@
             this.tbx_id.Name = "tbx_id";
             this.tbx_id.Size = new System.Drawing.Size(250, 21);
             this.tbx_id.TabIndex = 1;
-            this.tbx_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbx_id_KeyPress);
             // 
             // lbl_passwd
             // 
@@ -118,6 +116,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));

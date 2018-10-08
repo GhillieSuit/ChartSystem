@@ -88,5 +88,10 @@ namespace sensorchart
             }
             MConn.Close();
         }
+
+        private void btn_esc_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

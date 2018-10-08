@@ -61,25 +61,11 @@ namespace sensorchart
             login();
         }
 
-        private void tbx_id_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                login();
-            }
-        }
-
-        private void tbx_passwd_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                login();
-            }
-        }
-
         private void btn_signup_Click(object sender, EventArgs e)
         {
             Signup signupform = new Signup();
+            signupform.Owner = this;
+            //signupform.btn_esc.Hide();
             signupform.Show();
         }
     }
