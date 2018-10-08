@@ -261,8 +261,9 @@ namespace sensorchart
                         }
                     }
                 }
- 
-                wb.SaveAs(@"D:\Users\Desktop\test.xls", Excel.XlFileFormat.xlWorkbookNormal);   // 엑셀파일 저장
+
+                //wb.SaveAs(@"C:\report.xls", Excel.XlFileFormat.xlWorkbookNormal);   // 엑셀파일 저장
+                wb.SaveAs(Application.StartupPath + "/report.xls", Excel.XlFileFormat.xlWorkbookNormal);   // 엑셀파일 저장
                 wb.Close(true);
                 excelApp.Quit();
             } catch (Exception error) {

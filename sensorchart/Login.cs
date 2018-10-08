@@ -65,7 +65,7 @@ namespace sensorchart
         {
             Signup signupform = new Signup();
             signupform.Owner = this;
-            signupform.Show();
+            signupform.ShowDialog();
         }
     }
 }
