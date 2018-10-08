@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sheet));
             this.tbc_control1 = new System.Windows.Forms.TabControl();
             this.tbp_1 = new System.Windows.Forms.TabPage();
             this.btn_apply = new System.Windows.Forms.Button();
@@ -97,6 +98,7 @@
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.tbc_control1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sheet";

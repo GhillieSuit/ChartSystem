@@ -44,7 +44,7 @@
             this.gbx_login.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbx_login.BackColor = System.Drawing.Color.White;
+            this.gbx_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gbx_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbx_login.Controls.Add(this.btn_signup);
             this.gbx_login.Controls.Add(this.btn_login);
@@ -53,6 +53,7 @@
             this.gbx_login.Controls.Add(this.tbx_id);
             this.gbx_login.Controls.Add(this.lbl_passwd);
             this.gbx_login.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gbx_login.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.gbx_login.Location = new System.Drawing.Point(200, 100);
             this.gbx_login.Name = "gbx_login";
             this.gbx_login.Size = new System.Drawing.Size(400, 200);
@@ -82,9 +83,11 @@
             // 
             // lbl_id
             // 
-            this.lbl_id.Location = new System.Drawing.Point(30, 50);
+            this.lbl_id.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_id.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl_id.Location = new System.Drawing.Point(29, 54);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(62, 12);
+            this.lbl_id.Size = new System.Drawing.Size(62, 18);
             this.lbl_id.TabIndex = 0;
             this.lbl_id.Text = "ID";
             this.lbl_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,22 +97,23 @@
             this.tbx_passwd.Location = new System.Drawing.Point(120, 97);
             this.tbx_passwd.Name = "tbx_passwd";
             this.tbx_passwd.PasswordChar = '●';
-            this.tbx_passwd.Size = new System.Drawing.Size(250, 21);
+            this.tbx_passwd.Size = new System.Drawing.Size(250, 25);
             this.tbx_passwd.TabIndex = 2;
             // 
             // tbx_id
             // 
             this.tbx_id.Location = new System.Drawing.Point(120, 47);
             this.tbx_id.Name = "tbx_id";
-            this.tbx_id.Size = new System.Drawing.Size(250, 21);
+            this.tbx_id.Size = new System.Drawing.Size(250, 25);
             this.tbx_id.TabIndex = 1;
             // 
             // lbl_passwd
             // 
-            this.lbl_passwd.AutoSize = true;
-            this.lbl_passwd.Location = new System.Drawing.Point(30, 100);
+            this.lbl_passwd.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_passwd.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl_passwd.Location = new System.Drawing.Point(29, 104);
             this.lbl_passwd.Name = "lbl_passwd";
-            this.lbl_passwd.Size = new System.Drawing.Size(62, 12);
+            this.lbl_passwd.Size = new System.Drawing.Size(87, 18);
             this.lbl_passwd.TabIndex = 1;
             this.lbl_passwd.Text = "Password";
             this.lbl_passwd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,6 +127,7 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.gbx_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
